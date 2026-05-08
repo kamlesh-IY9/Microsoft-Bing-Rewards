@@ -15,3 +15,5 @@ bun.lock
 logs/
 .stfolder/
 .env
+env
+history.json

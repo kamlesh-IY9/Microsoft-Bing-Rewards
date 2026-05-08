@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Rewards Bot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Microsoft Rewards Dashboard</h1>
+            <div class="controls">
+                <button id="run-btn" class="btn primary">Run Now</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="cards-container">
+                <div class="card" id="account1-card">
+                    <div class="card-header">
+                        <h2>Account 1</h2>
+                        <button class="btn secondary open-browser-btn" data-email="jke360@outlook.com">Open Browser</button>
+                    </div>
+                    <p class="email" id="acc1-email">Loading...</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="label">Points</span>
+                            <span class="value" id="acc1-points">--</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label">Status</span>
+                            <span class="value status-badge idle" id="acc1-status">Idle</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="account2-card">
+                    <div class="card-header">
+                        <h2>Account 2</h2>
+                        <button class="btn secondary open-browser-btn" data-email="shukra3@outlook.com">Open Browser</button>
+                    </div>
+                    <p class="email" id="acc2-email">Loading...</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="label">Points</span>
+                            <span class="value" id="acc2-points">--</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label">Status</span>
+                            <span class="value status-badge idle" id="acc2-status">Idle</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="logs-section">
+                <h2>Live Logs</h2>
+                <div class="log-container" id="log-viewer">
+                    <!-- Logs will appear here -->
+                </div>
+            </section>
+
+            <section class="history-section">
+                <h2>Recent History</h2>
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Account 1 (+Pts)</th>
+                            <th>Account 2 (+Pts)</th>
+                            <th>Total Pts</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-body">
+                        <!-- History rows here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="renderer.js"></script>
+    <style>
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .btn.secondary {
+            background-color: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-size: 0.75rem;
+            padding: 0.3rem 0.6rem;
+            margin-top: -5px;
+        }
+        .btn.secondary:hover {
+            background-color: rgba(0, 120, 212, 0.1);
+        }
+    </style>
+</body>
+</html>
