@@ -2,7 +2,7 @@
 # Stage 1: Builder
 ###############################################################################
 FROM node:24-slim AS builder
-
+ 
 WORKDIR /usr/src/microsoft-rewards-script
 
 ENV PLAYWRIGHT_BROWSERS_PATH=0
